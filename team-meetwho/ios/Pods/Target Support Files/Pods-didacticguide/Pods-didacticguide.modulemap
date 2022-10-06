@@ -1,0 +1,6 @@
+module Pods_didacticguide {
+  umbrella header "Pods-didacticguide-umbrella.h"
+
+  export *
+  module * { export * }
+}
