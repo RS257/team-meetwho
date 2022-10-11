@@ -1,114 +1,15 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-didacticguide-dev-131056-authRole",
-      "UnauthRoleArn": "arn:aws:iam::219693452334:role/amplify-didacticguide-dev-131056-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::219693452334:role/amplify-didacticguide-dev-131056-authRole",
+      "AuthRoleName": "amplify-teammeetwho-dev-115507-authRole",
+      "UnauthRoleArn": "arn:aws:iam::147354668595:role/amplify-teammeetwho-dev-115507-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::147354668595:role/amplify-teammeetwho-dev-115507-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-didacticguide-dev-131056-deployment",
-      "UnauthRoleName": "amplify-didacticguide-dev-131056-unauthRole",
-      "StackName": "amplify-didacticguide-dev-131056",
-      "StackId": "arn:aws:cloudformation:us-east-1:219693452334:stack/amplify-didacticguide-dev-131056/5f0a1d20-3062-11ed-ae1d-0a601e9faa95",
-      "AmplifyAppId": "dz6xh0c6q7n6f"
-    }
-  },
-  "auth": {
-    "didacticguidef8ddf454": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false,
-      "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
-      "output": {
-        "UserPoolId": "us-east-1_HTM11GEB6",
-        "AppClientIDWeb": "3r4i70u4856mvn6vkgoqtvu8bo",
-        "AppClientID": "2l5fdemgstv6lk09nehkp4vd14",
-        "IdentityPoolId": "us-east-1:c4cb7226-728c-4e53-94a3-32b3b8d1061f",
-        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:219693452334:userpool/us-east-1_HTM11GEB6",
-        "IdentityPoolName": "didacticguidef8ddf454_identitypool_f8ddf454__dev",
-        "UserPoolName": "didacticguidef8ddf454_userpool_f8ddf454"
-      },
-      "lastPushTimeStamp": "2022-09-11T21:11:18.996Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-didacticguide-dev-131056-deployment/amplify-cfn-templates/auth/didacticguidef8ddf454-cloudformation-template.json",
-        "logicalId": "authdidacticguidef8ddf454"
-      }
-    }
-  },
-  "api": {
-    "didacticguide": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "didacticguidef8ddf454",
-          "attributes": [
-            "UserPoolId"
-          ]
-        }
-      ],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authdidacticguidef8ddf454"
-              }
-            }
-          ]
-        },
-        "GraphQLAPIIdOutput": "6b7t2jia6zgapimp4xetqoyxay",
-        "GraphQLAPIEndpointOutput": "https://6jr3hdl6yvcffh74vvfvqqq6u4.appsync-api.us-east-1.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-3vjrgbilkbexrmj5k3vqtok2bm"
-      },
-      "lastPushTimeStamp": "2022-09-11T21:11:18.998Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-didacticguide-dev-131056-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apididacticguide"
-      },
-      "lastPushDirHash": "es3zFgveBGQyWsjB3f15vtg6LYE="
-    }
-  },
-  "storage": {
-    "s370635c30": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "lastPushTimeStamp": "2022-09-11T21:11:19.154Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-didacticguide-dev-131056-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "logicalId": "storages370635c30"
-      },
-      "output": {
-        "BucketName": "didacticguidede4915db245046e88382fa0017309832131056-dev",
-        "Region": "us-east-1"
-      },
-      "lastPushDirHash": "ukN9qL3/H7iBwbZo6cq1pvpNv7g="
+      "DeploymentBucketName": "amplify-teammeetwho-dev-115507-deployment",
+      "UnauthRoleName": "amplify-teammeetwho-dev-115507-unauthRole",
+      "StackName": "amplify-teammeetwho-dev-115507",
+      "StackId": "arn:aws:cloudformation:us-east-1:147354668595:stack/amplify-teammeetwho-dev-115507/14ae4ba0-497d-11ed-a91d-0e63e6100f63",
+      "AmplifyAppId": "d32z0ipqxp20nq"
     }
   }
 }
