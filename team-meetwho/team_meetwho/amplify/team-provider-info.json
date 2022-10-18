@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-teammeetwho-dev-212845-authRole",
+      "UnauthRoleArn": "arn:aws:iam::147354668595:role/amplify-teammeetwho-dev-212845-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::147354668595:role/amplify-teammeetwho-dev-212845-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-teammeetwho-dev-212845-deployment",
+      "UnauthRoleName": "amplify-teammeetwho-dev-212845-unauthRole",
+      "StackName": "amplify-teammeetwho-dev-212845",
+      "StackId": "arn:aws:cloudformation:us-east-1:147354668595:stack/amplify-teammeetwho-dev-212845/318097f0-4dd4-11ed-9e09-0a7c47c9ec53",
+      "AmplifyAppId": "dvhmuryavhtmx"
+    }
+  }
+}
