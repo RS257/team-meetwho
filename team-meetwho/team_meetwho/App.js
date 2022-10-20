@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
+import {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -16,15 +16,14 @@ import {
   Text,
   useColorScheme,
   View,
+  Switch, Button
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {FormGroup, FormControlLabel} from '@material-ui/core/FormGroup';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import eventRequest from './src/screens/eventRequest';
+//import { Button } from '@material-ui/core';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -52,7 +51,7 @@ const Section = ({children, title}): Node => {
   );
 };
 
-const App: () => Node = () => {
+const App: () => React$Node = ({navigation}) => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -65,25 +64,32 @@ const App: () => Node = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
+          <Section title="Availability">
+          {/* <FormGroup>
+            <FormControlLabel control={<Switch defaultChecked color="secondary"/>} label="Available" />
+            <FormControlLabel disabled control={<Switch />} label="Unavailable" />
+          </FormGroup> */}
+          <Switch />
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+
+
+          <Section title="All Friends">
+          <Button title= "Annie Seth" color="#841584" onPress={() => navigation.navigate('eventRequest')}/>
+          <Button title= "Daniel Wang"/>  
+          <Button title= "Rahul Bhatnagar"/> 
           </Section>
+
+
           <Section title="Debug">
             <DebugInstructions />
           </Section>
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -108,5 +114,16 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default App;
