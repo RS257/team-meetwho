@@ -51,7 +51,8 @@ const Section = ({children, title}): Node => {
   );
 };
 
-const App: () => React$Node = ({navigation}) => {
+function HomeScreen({navigation}) {
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -94,7 +95,7 @@ const App: () => React$Node = ({navigation}) => {
       </ScrollView>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   sectionContainer: {
